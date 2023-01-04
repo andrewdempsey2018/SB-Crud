@@ -9,25 +9,21 @@
     <!-- Spring Boot does not need us to specify the 'static' folder -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <title>Blog Home</title>
+    <title>Create new post</title>
 
-    <h1>Blog Home Page</h1>
+    <h1>Create new post</h1>
+    <br>
+    <p>Type a new post here...</p>
+    <br>
+    <p>form here</p>
 
-    <p>Hello</p>
-
-    <th:block th:each="post : ${posts}">
-        <p th:text="${post.postText}"></p>
-        <p>-------</p>
-        <br>
-    </th:block>
+    <form action="#" th:action="@{/create_new_post}" th:object="${post}" method="post">
+        <p>your text: <input type="text" th:field="*{postText}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
 
     <br>
-    <a href="/about">about</a>
-    <br>
-    <a href="/h2-console">database console</a>
-    <br>
-    <a href="/new">Create New Post</a>
-
+    <a href="/">back</a>
 </head>
 <body>
 
