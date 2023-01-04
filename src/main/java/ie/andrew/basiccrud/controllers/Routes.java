@@ -10,4 +10,9 @@ public class Routes {
     private String About(){
         return "about";
     }
+
+    @GetMapping("/h2-console")
+    private String Console(){
+        return "h2-console";
+    }
 }
